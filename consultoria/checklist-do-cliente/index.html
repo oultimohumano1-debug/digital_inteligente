@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check-up da Empresa | Consultoria Digital Inteligente</title>
+<style>
+:root{--azul:#12355b;--azul2:#1f5f99;--claro:#eef4fa;--borda:#cfd9e4;--texto:#1c2733;--ok:#1b7f4b;--alerta:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--texto);background:#f6f8fb;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding:16px}
+header.capa{background:var(--azul);color:#fff;border-radius:14px;padding:28px 24px;margin-bottom:16px}
+header.capa small{letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+header.capa h1{margin:6px 0 8px;font-size:1.7rem}
+header.capa p{margin:0;opacity:.92}
+.aviso{background:#fff7e0;border:1px solid #f0d58a;border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:.95rem}
+.aviso.red{background:#fdecea;border-color:#f3b5b0}
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;padding:8px 16px 10px;box-shadow:0 2px 8px rgba(18,53,91,.15)}
+.bar .in{max-width:860px;margin:0 auto}
+body{padding-top:52px}
+.sec-atual{font-weight:600;color:var(--azul)}
+.addbtn{margin-top:10px;background:var(--claro);color:var(--azul);border:1px dashed var(--azul2)}
+.rm{background:#fff;color:var(--alerta);border:0;padding:4px 8px;font-size:1rem}
+.bar .trk{height:10px;background:#dfe7f0;border-radius:99px;overflow:hidden}
+.bar .fill{height:100%;width:0;background:var(--azul2);transition:width .3s}
+.bar span{font-size:.85rem;color:#51606f}
+section.sec{background:#fff;border:1px solid var(--borda);border-radius:12px;padding:18px;margin-bottom:14px}
+section.sec h2{margin:0 0 4px;font-size:1.15rem;color:var(--azul)}
+section.sec .desc{margin:0 0 12px;color:#51606f;font-size:.92rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f{display:flex;flex-direction:column;gap:4px}
+.f.w{grid-column:1/-1}
+label.l{font-weight:600;font-size:.92rem}
+.hint{font-size:.8rem;color:#667583}
+input[type=text],input[type=tel],input[type=email],input[type=url],input[type=number],input[type=time],select,textarea{width:100%;padding:10px;border:1px solid var(--borda);border-radius:8px;font:inherit;background:#fff;color:var(--texto)}
+textarea{min-height:76px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--azul2);border-color:var(--azul2)}
+.opts{display:flex;flex-wrap:wrap;gap:6px 16px}
+.opts label{display:flex;gap:6px;align-items:center;font-size:.92rem}
+table.t{width:100%;border-collapse:collapse;font-size:.9rem}
+table.t th{background:var(--claro);text-align:left;padding:6px;border:1px solid var(--borda)}
+table.t td{padding:4px;border:1px solid var(--borda)}
+table.t input{border:0;padding:6px}
+.rowtbl{overflow-x:auto}
+.acoes{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 40px}
+button{font:inherit;border:0;border-radius:10px;padding:13px 20px;cursor:pointer;font-weight:700}
+.b1{background:var(--ok);color:#fff}
+.b2{background:#fff;color:var(--azul);border:1px solid var(--azul)}
+.b3{background:#fff;color:var(--alerta);border:1px solid var(--alerta)}
+.print-head{display:none}
+.invest{background:var(--claro);border-radius:10px;padding:12px 14px;font-size:.92rem}
+.invest ul{margin:6px 0 0 18px;padding:0}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+@media print{
+ body{background:#fff;font-size:11pt}
+ .bar,.acoes,.noprint{display:none!important}
+ .wrap{max-width:100%;padding:0}
+ header.capa{background:#fff;color:#000;border:2px solid var(--azul);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ section.sec{break-inside:avoid-page;border-color:#999}
+ textarea{border:1px solid #bbb;resize:none;overflow:visible;min-height:0}
+ .rmcol{display:none}
+ body{padding-top:0}
+ input,select,textarea{border-color:#bbb}
+ .print-head{display:block;margin-bottom:10px;font-size:.9rem}
+ @page{margin:14mm}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="capa">
+  <small>Consultoria Digital Inteligente</small>
+  <h1>Check-up da Empresa</h1>
+  <p>Preencha com calma. Com estas informações eu configuro o Google Meu Negócio, Google Ads, Facebook, Instagram, Meta Ads, seu conteúdo semanal e o site de uma página. Ao final, gere o PDF e envie para mim pelo WhatsApp (34) 99871-8340.</p>
+</header>
+
+<div class="aviso red noprint"><b>Segurança:</b> NUNCA escreva senhas neste formulário. Os acessos serão feitos por você, na sua máquina, com a minha orientação (compartilhamento de tela ou presencial). Aqui informe apenas o e-mail de cada conta.</div>
+<div class="aviso noprint">Suas respostas ficam salvas neste navegador enquanto você preenche. Você pode fechar e voltar depois, no mesmo aparelho. Campos que você não souber, deixe em branco ou escreva "não sei".</div>
+
+<div class="print-head" id="printHead"></div>
+
+<div class="bar noprint"><div class="in"><div class="trk"><div class="fill" id="fill"></div></div><span id="pct">0% preenchido</span> · <span class="sec-atual" id="secAtual"></span></div></div>
+
+<form id="form" onsubmit="return false" autocomplete="off"></form>
+
+<div class="acoes">
+  <button class="b1" id="btnPdf">Gerar PDF para enviar</button>
+  <button class="b2" id="btnSave">Salvar rascunho</button>
+  <button class="b3" id="btnClear">Limpar tudo</button>
+</div>
+<p class="noprint" style="font-size:.85rem;color:#51606f;margin-top:-26px;margin-bottom:40px">Dica: na tela de impressão, escolha "Salvar como PDF" como destino. Depois envie o PDF junto com sua logo e fotos.</p>
+</div>
+
+<script>
+const S = [
+{t:"1. Dados da empresa",d:"Informações básicas que usarei em todos os canais.",f:[
+ {id:"razao",l:"Nome fantasia (como os clientes conhecem)",w:1},
+ {id:"razaosoc",l:"Razão social (se tiver)"},
+ {id:"cnpj",l:"CNPJ ou MEI (se tiver)"},
+ {id:"resp",l:"Nome do responsável"},
+ {id:"ramo",l:"Ramo / tipo de negócio",h:"Ex.: salão de beleza, clínica odontológica, encanador, restaurante"},
+ {id:"inicio",l:"Ano de início do negócio"},
+ {id:"equipe",l:"Quantas pessoas trabalham aí?",type:"number"},
+ {id:"historia",l:"Conte em poucas linhas a história do negócio",type:"textarea",w:1}
+]},
+{t:"2. Contato e localização",d:"Estes dados devem ser idênticos em todos os lugares (Google, Meta e site).",f:[
+ {id:"zap",l:"WhatsApp do negócio (com DDD)",type:"tel"},
+ {id:"tel",l:"Telefone fixo (se tiver)",type:"tel"},
+ {id:"email",l:"E-mail do negócio",type:"email"},
+ {id:"emailg",l:"E-mail Google que será usado (Gmail)",type:"email",h:"Será o dono do Perfil da Empresa e do Google Ads"},
+ {id:"end",l:"Endereço completo (rua, número, bairro, CEP)",w:1},
+ {id:"cidade",l:"Cidade / Estado"},
+ {id:"ref",l:"Ponto de referência"},
+ {id:"atend",l:"Como atende o cliente?",type:"radio",o:["Só no local (cliente vem até mim)","Eu vou até o cliente","Os dois","Também online"],w:1},
+ {id:"area",l:"Cidades e bairros que você atende",type:"textarea",w:1,h:"O Google Ads e a Meta usarão esta região"}
+]},
+{t:"3. Horário de funcionamento",d:"Marque 'Fechado' nos dias sem atendimento.",special:"horario"},
+{t:"4. Serviços e produtos",d:"Liste do que mais vende / mais lucra para o que menos vende. Preço é opcional, mas ajuda muito nos anúncios.",special:"servicos"},
+{t:"5. Cliente ideal e diferenciais",d:"Isto define a mensagem dos anúncios e do conteúdo.",f:[
+ {id:"ideal",l:"Quem é o seu melhor cliente?",type:"textarea",w:1,h:"Idade aproximada, bairro, o que procura, o que valoriza"},
+ {id:"dor",l:"Que problema ou desejo leva a pessoa até você?",type:"textarea",w:1},
+ {id:"dif",l:"Por que escolher você e não o concorrente?",type:"textarea",w:1},
+ {id:"obj",l:"Objeções comuns (o que o cliente diz antes de fechar)",type:"textarea",w:1,h:"Ex.: 'está caro', 'vou pensar', 'tenho medo de não dar certo'"},
+ {id:"depo",l:"Depoimentos ou avaliações que você já recebeu (cole aqui ou envie print)",type:"textarea",w:1},
+ {id:"prom",l:"Promoção ou oferta de entrada para novos clientes",type:"textarea",w:1,h:"Ex.: primeira consulta com desconto, avaliação grátis"}
+]},
+{t:"6. Concorrentes e referências",d:"Até 3 concorrentes locais e 2 perfis que você admira.",special:"conc"},
+{t:"7. Presença digital atual",d:"Informe o que já existe. Se não existe, escreva 'não tenho'.",f:[
+ {id:"gmn",l:"Perfil da Empresa no Google (Google Meu Negócio)",type:"radio",o:["Não tenho","Tenho e está verificado","Tenho, não verificado","Não sei"],w:1},
+ {id:"gmnlink",l:"Link do perfil no Google (se tiver)",type:"url"},
+ {id:"insta",l:"Instagram (@usuário)"},
+ {id:"instatipo",l:"Conta do Instagram é",type:"radio",o:["Comercial","Pessoal","Não sei"]},
+ {id:"face",l:"Link da página do Facebook",type:"url"},
+ {id:"site",l:"Site atual (se tiver)",type:"url"},
+ {id:"dominio",l:"Domínio que já possui (se tiver)"},
+ {id:"gads",l:"Já usou Google Ads?",type:"radio",o:["Nunca","Já usei e parei","Uso hoje"],w:1},
+ {id:"mads",l:"Já anunciou no Facebook/Instagram?",type:"radio",o:["Nunca","Já impulsionei posts","Já usei o Gerenciador de Anúncios","Uso hoje"],w:1},
+ {id:"hist",l:"Se já anunciou: quanto gastou, o que aconteceu, o que deu errado?",type:"textarea",w:1},
+ {id:"bm",l:"Você é administrador da página do Facebook e do Instagram?",type:"radio",o:["Sim","Não, outra pessoa administra","Não sei"],w:1}
+]},
+{t:"8. Metas e orçamento de anúncios",d:"O valor dos anúncios é pago por você diretamente ao Google e à Meta. Não faz parte da consultoria.",f:[
+ {id:"meta",l:"Qual é sua principal meta nos próximos 90 dias?",type:"radio",o:["Mais ligações","Mais mensagens no WhatsApp","Mais visitas ao local","Mais agendamentos","Divulgar a marca"],w:1},
+ {id:"metanum",l:"Quantos clientes novos por mês você gostaria?",type:"number"},
+ {id:"ticket",l:"Valor médio de uma venda/atendimento (R$)",type:"number"},
+ {id:"margem",l:"Quantos clientes novos você consegue atender por mês sem sobrecarregar?",type:"number"},
+ {id:"orc",l:"Orçamento mensal para anúncios (R$)",type:"number",h:"Sugestão para começar: R$ 300 a R$ 500, divididos entre Google e Meta"},
+ {id:"divisao",l:"Preferência de divisão",type:"radio",o:["Mais no Google","Mais na Meta","Dividir igual","Deixo você decidir"]},
+ {id:"pag",l:"Já possui cartão ou Pix para recarregar a conta de anúncios?",type:"radio",o:["Sim","Não"]}
+]},
+{t:"9. Conteúdo semanal (1 imagem + 1 vídeo)",d:"Para criar posts e vídeos com a cara do seu negócio.",f:[
+ {id:"cores",l:"Cores da marca",h:"Ex.: azul e branco. Se não tem, escreva 'não tenho'"},
+ {id:"logo",l:"Você tem logo?",type:"radio",o:["Sim, vou enviar","Não tenho"]},
+ {id:"tom",l:"Tom de voz",type:"radio",o:["Profissional e sério","Próximo e simpático","Descontraído","Premium e sofisticado"],w:1},
+ {id:"temas",l:"Assuntos que você quer abordar no conteúdo",type:"textarea",w:1,h:"Dicas, bastidores, antes e depois, dúvidas frequentes, promoções"},
+ {id:"nunca",l:"O que NÃO pode aparecer no conteúdo?",type:"textarea",w:1,h:"Palavras, promessas, temas, concorrentes"},
+ {id:"fotos",l:"Tem fotos e vídeos do local, equipe e trabalhos?",type:"radio",o:["Sim, muitos","Poucos","Não tenho"],w:1},
+ {id:"rosto",l:"Você aceita aparecer em vídeos?",type:"radio",o:["Sim","Prefiro não aparecer","Só a equipe ou o local"],w:1},
+ {id:"regras",l:"Seu ramo tem regras de publicidade (saúde, estética, advocacia, etc.)?",type:"textarea",w:1,h:"Ex.: conselho de classe que limita antes e depois ou promessas"}
+]},
+{t:"10. Site de uma página (brinde)",d:"Página única hospedada no GitHub, sem mensalidade. Só o domínio custa cerca de R$ 40 por ano.",f:[
+ {id:"dom1",l:"Domínio desejado (1ª opção)",h:"Ex.: meunegocio.com.br"},
+ {id:"dom2",l:"Domínio (2ª opção)"},
+ {id:"botao",l:"O que o visitante deve fazer no site?",type:"radio",o:["Chamar no WhatsApp","Ligar","Ver o endereço e ir até o local","Agendar"],w:1},
+ {id:"secoes",l:"Seções que você quer no site",type:"textarea",w:1,h:"Ex.: serviços, sobre, depoimentos, perguntas frequentes, mapa"},
+ {id:"sitref",l:"Algum site que você gosta como referência?",type:"url",w:1},
+ {id:"gh",l:"Já tem conta no GitHub? (usuário)",h:"Se não tiver, criamos juntos na reunião"}
+]},
+{t:"11. Disponibilidade e suporte",d:"Para combinarmos a reunião de configuração e a tarde de treinamento.",f:[
+ {id:"pc",l:"Computador que será usado",type:"radio",o:["Windows","Mac","Notebook compartilhado","Só tenho celular"]},
+ {id:"chrome",l:"Já usa o navegador Google Chrome?",type:"radio",o:["Sim","Não"]},
+ {id:"claude",l:"Já tem assinatura do Claude Pro?",type:"radio",o:["Sim","Não, vou contratar"]},
+ {id:"dias",l:"Melhores dias e horários para reunião",type:"textarea",w:1},
+ {id:"modal",l:"Prefere a configuração",type:"radio",o:["Presencial","Por vídeo com compartilhamento de tela"],w:1},
+ {id:"modelo",l:"Depois da configuração, você prefere",type:"radio",o:["Executar eu mesmo (checklist semanal)","Que o consultor execute (R$ 300 por mês)","Ainda não sei"],w:1},
+ {id:"obs",l:"Alguma observação importante?",type:"textarea",w:1}
+]}
+];
+
+const DIAS=["Segunda","Terça","Quarta","Quinta","Sexta","Sábado","Domingo"];
+const form=document.getElementById("form");
+let KEY="checkup_empresa_v1";
+
+function esc(s){return String(s).replace(/"/g,"&quot;")}
+function field(f){
+  const w=f.w?" w":"";
+  let inner="";
+  const h=f.h?`<span class="hint">${f.h}</span>`:"";
+  if(f.type==="textarea") inner=`<textarea id="${f.id}" data-k="${f.id}"></textarea>`;
+  else if(f.type==="radio") inner=`<div class="opts">${f.o.map((o,i)=>`<label><input type="radio" name="${f.id}" data-k="${f.id}" value="${esc(o)}"> ${o}</label>`).join("")}</div>`;
+  else inner=`<input type="${f.type||"text"}" id="${f.id}" data-k="${f.id}" ${f.type==="number"?'min="0" inputmode="decimal"':''}>`;
+  return `<div class="f${w}"><label class="l" for="${f.id}">${f.l}</label>${h}${inner}</div>`;
+}
+function horario(){
+  return `<div class="rowtbl"><table class="t"><tr><th>Dia</th><th>Abre</th><th>Fecha</th><th>Fechado</th></tr>${DIAS.map((d,i)=>`<tr><td>${d}</td><td><input type="time" data-k="h${i}a"></td><td><input type="time" data-k="h${i}b"></td><td style="text-align:center"><input type="checkbox" data-k="h${i}c"></td></tr>`).join("")}</table></div>
+  <div class="f w" style="margin-top:10px"><label class="l">Fecha para almoço ou tem exceções (feriados)?</label><input type="text" data-k="hobs"></div>`;
+}
+function srow(){return `<tr class="srow"><td><input data-s="n" placeholder="Serviço / produto"></td><td><input data-s="p" placeholder="R$"></td><td><input data-s="d" placeholder="Descrição curta"></td><td style="text-align:center"><input type="checkbox" data-s="f" title="Quero destacar"></td><td class="rmcol"><button type="button" class="rm" title="Remover" onclick="rmRow(this)">✕</button></td></tr>`}
+function servicos(){
+  return `<div class="rowtbl"><table class="t"><thead><tr><th>Serviço / produto</th><th>Preço</th><th>Descrição</th><th>Destaque</th><th class="rmcol"></th></tr></thead><tbody id="stb">${srow()+srow()+srow()}</tbody></table></div>
+  <button type="button" class="addbtn noprint" id="addS">+ Adicionar serviço ou produto</button>
+  <div class="f w" style="margin-top:10px"><label class="l">Serviço que você MAIS quer vender agora</label><input type="text" data-k="foco"></div>`;
+}
+function conc(){
+  let r="";for(let i=0;i<3;i++)r+=`<tr><td><input data-k="c${i}n" placeholder="Nome"></td><td><input data-k="c${i}l" placeholder="Instagram / site / Google"></td><td><input data-k="c${i}o" placeholder="O que fazem bem / mal"></td></tr>`;
+  return `<div class="rowtbl"><table class="t"><tr><th>Concorrente</th><th>Link</th><th>Observação</th></tr>${r}</table></div>
+  <div class="f w" style="margin-top:10px"><label class="l">Perfis que você admira (qualquer ramo)</label><textarea data-k="ref"></textarea></div>`;
+}
+S.forEach(s=>{
+  let body = s.special==="horario"?horario():s.special==="servicos"?servicos():s.special==="conc"?conc():`<div class="grid">${s.f.map(field).join("")}</div>`;
+  form.insertAdjacentHTML("beforeend",`<section class="sec"><h2>${s.t}</h2><p class="desc">${s.d}</p>${body}</section>`);
+});
+form.insertAdjacentHTML("beforeend",`<section class="sec"><h2>12. Investimento e autorização</h2>
+<div class="invest"><b>Consultoria Digital Inteligente: R$ 1.500 (pagamento único)</b>
+<ul><li>Configuração completa feita na sua máquina: Google Meu Negócio, Google Ads (primeiras campanhas), Facebook, Instagram, Planner da Meta e Meta Ads.</li>
+<li>Site de uma página como brinde, hospedado no GitHub (sem mensalidade).</li>
+<li>Criação de conteúdo: 1 imagem e 1 vídeo por semana.</li>
+<li>Treinamento de uma tarde e checklist semanal alinhado com você.</li>
+<li>Suporte de 90 dias como garantia.</li>
+<li>Custos recorrentes por sua conta: Claude Pro (cerca de R$ 110/mês), domínio (cerca de R$ 40/ano) e verba de anúncios paga direto ao Google e à Meta.</li>
+<li>Opcional: execução mensal pelo consultor por R$ 300/mês.</li></ul></div>
+<div class="grid" style="margin-top:12px">
+<div class="f w"><label class="l"><input type="checkbox" data-k="aut1"> Declaro que as informações acima são verdadeiras e que sou o responsável pelo negócio.</label></div>
+<div class="f w"><label class="l"><input type="checkbox" data-k="aut2"> Autorizo o uso do nome, logo, fotos e textos do meu negócio para criar sites, anúncios e publicações.</label></div>
+<div class="f w"><label class="l"><input type="checkbox" data-k="aut3"> Entendo que não há garantia de resultado e que os anúncios dependem de verba, concorrência e mercado.</label></div>
+<div class="f"><label class="l" for="assin">Nome completo (assinatura)</label><input id="assin" data-k="assin"></div>
+<div class="f"><label class="l" for="datapre">Data</label><input id="datapre" type="date" data-k="datapre"></div>
+</div></section>
+<section class="sec noprint"><h2>Materiais para enviar junto com o PDF</h2>
+<div class="opts" style="flex-direction:column;gap:6px"><label><input type="checkbox" data-k="m1"> Logo (PNG, se tiver)</label><label><input type="checkbox" data-k="m2"> Fotos do local, equipe e trabalhos</label><label><input type="checkbox" data-k="m3"> Vídeos curtos do dia a dia (se tiver)</label><label><input type="checkbox" data-k="m4"> Prints de avaliações e depoimentos</label><label><input type="checkbox" data-k="m5"> Lista de preços atualizada</label></div></section>`);
+
+/* linhas dinâmicas */
+function renum(){document.querySelectorAll("#stb .srow").forEach((tr,i)=>{tr.querySelectorAll("[data-s]").forEach(el=>{el.dataset.k="s"+i+el.dataset.s});const b=tr.querySelector(".rm");if(b)b.style.visibility=document.querySelectorAll("#stb .srow").length>1?"visible":"hidden"})}
+function ensureRows(n){const tb=document.getElementById("stb");while(tb.querySelectorAll(".srow").length<n)tb.insertAdjacentHTML("beforeend",srow());renum()}
+function rmRow(btn){btn.closest("tr").remove();renum();save();progress()}
+document.getElementById("addS").onclick=()=>{const n=document.querySelectorAll("#stb .srow").length;ensureRows(n+1);const last=document.querySelectorAll("#stb .srow")[n];last.querySelector("input").focus();save();progress()};
+renum();
+
+/* persistência (protegida) */
+function all(){return [...document.querySelectorAll("[data-k]")]}
+function load(){
+  try{
+    const d=JSON.parse(localStorage.getItem(KEY)||"{}");
+    ensureRows(Math.max(3,d._ns||0));
+    all().forEach(el=>{const v=d[el.dataset.k];if(v===undefined)return;
+      if(el.type==="radio")el.checked=(el.value===v);
+      else if(el.type==="checkbox")el.checked=!!v;
+      else el.value=v});
+  }catch(e){}
+}
+function save(){
+  try{
+    const d={_ns:document.querySelectorAll('#stb .srow').length};
+    all().forEach(el=>{
+      if(el.type==="radio"){if(el.checked)d[el.dataset.k]=el.value}
+      else if(el.type==="checkbox")d[el.dataset.k]=el.checked;
+      else d[el.dataset.k]=el.value});
+    localStorage.setItem(KEY,JSON.stringify(d));
+  }catch(e){}
+}
+function progress(){
+  const keys=new Set(),filled=new Set();
+  all().forEach(el=>{
+    if(el.type==="checkbox")return;
+    if(el.dataset.s&&el.dataset.k!=="s0n")return;
+    keys.add(el.dataset.k);
+    if(el.type==="radio"){if(el.checked)filled.add(el.dataset.k)}
+    else if(el.value.trim())filled.add(el.dataset.k)});
+  const p=keys.size?Math.round(filled.size/keys.size*100):0;
+  document.getElementById("fill").style.width=p+"%";
+  document.getElementById("pct").textContent=p+"% preenchido";
+}
+function grow(){document.querySelectorAll("textarea").forEach(t=>{t.style.height="auto";t.style.height=(t.scrollHeight+4)+"px"})}
+function secAtual(){const secs=[...document.querySelectorAll("section.sec h2")];let cur="";secs.forEach(h=>{if(h.getBoundingClientRect().top<140)cur=h.textContent});document.getElementById("secAtual").textContent=cur}
+window.addEventListener("scroll",secAtual,{passive:true});
+form.addEventListener("input",()=>{save();progress()});
+form.addEventListener("change",()=>{save();progress()});
+document.getElementById("btnSave").onclick=()=>{save();alert("Rascunho salvo neste navegador.")};
+document.getElementById("btnClear").onclick=()=>{
+  if(!confirm("Apagar todas as respostas?"))return;
+  try{localStorage.removeItem(KEY)}catch(e){}
+  location.reload()};
+function prepPrint(){
+  const nome=(document.querySelector('[data-k="razao"]')||{}).value||"";
+  document.getElementById("printHead").innerHTML="<b>Check-up da Empresa</b>"+(nome?" · "+nome:"")+" · Gerado em "+new Date().toLocaleDateString("pt-BR");
+  grow();
+}
+window.addEventListener("beforeprint",prepPrint);
+document.getElementById("btnPdf").onclick=()=>{
+  save();prepPrint();
+  setTimeout(()=>window.print(),100)};
+load();progress();
+</script>
+</body>
+</html>
