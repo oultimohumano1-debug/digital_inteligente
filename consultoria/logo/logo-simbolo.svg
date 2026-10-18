@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024"><title>Consultoria Digital Inteligente</title><g transform="translate(0.000 0.000) scale(21.333333)">
+  <defs>
+    <linearGradient id="mg" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse"><stop stop-color="#EFE2C6"/><stop offset=".45" stop-color="#C9A96E"/><stop offset="1" stop-color="#9C7C45"/></linearGradient>
+    <linearGradient id="mb" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#151E31"/><stop offset="1" stop-color="#0A0F1C"/></linearGradient>
+    <radialGradient id="md" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(39 24) scale(5)"><stop stop-color="#8CC7BF"/><stop offset="1" stop-color="#4F9A94"/></radialGradient>
+  </defs>
+  <rect x="1" y="1" width="46" height="46" rx="13" fill="url(#mb)" stroke="#E8D5B0" stroke-opacity=".22"/>
+  <path d="M34.6 13.4A15 15 0 1 0 34.6 34.6" fill="none" stroke="url(#mg)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M18 16.5h4.5a7.5 7.5 0 0 1 0 15H18z" fill="none" stroke="url(#mg)" stroke-width="2.6" stroke-linejoin="round"/>
+  <circle cx="39" cy="24" r="2.6" fill="url(#md)"/>
+</g></svg>
